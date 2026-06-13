@@ -49,10 +49,13 @@ npm run lint         # Lint
 ```
 personal-portfolio/
 ├── src/
-│   └── app/             # App Router routes, layouts, pages
-│       ├── layout.tsx
-│       ├── page.tsx
-│       └── globals.css
+│   ├── app/             # App Router routes, layouts, pages
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── globals.css
+│   ├── sections/        # Top-level page sections (Hero, Manifesto, Projects, ...)
+│   ├── components/      # Shared UI primitives and 3D components
+│   └── lib/             # Shared utilities (motion primitives, etc.)
 ├── public/              # Static assets
 └── .github/workflows/   # CI
 ```
