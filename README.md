@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it.
 
 ## Deployment
 
-Deployed on [Vercel](https://vercel.com) — pushes to `main` deploy automatically, PRs get preview deployments.
+Deployed on [Netlify](https://www.netlify.com) via `netlify.toml` and the `@netlify/plugin-nextjs` build plugin — pushes to `main` deploy automatically, PRs get preview deployments.
 
 ## Contributing / AI-assisted workflow
 
