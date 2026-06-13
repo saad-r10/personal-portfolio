@@ -1,0 +1,3 @@
+Reviewed CLAUDE.md for issue #7 (About/story section). The Project Structure
+section already documents src/sections/ generically ("Hero, Manifesto,
+Projects, ..."), so no documentation updates are required for this change.
