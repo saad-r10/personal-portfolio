@@ -57,7 +57,7 @@ personal-portfolio/
 └── .github/workflows/   # CI
 ```
 
-**Tech:** Next.js (App Router) + TypeScript + Tailwind CSS. Deployment target: Vercel.
+**Tech:** Next.js (App Router) + TypeScript + Tailwind CSS. Deployment target: Netlify.
 
 ---
 
@@ -65,7 +65,7 @@ personal-portfolio/
 
 - **CI:** GitHub Actions runs `npm ci`, `npm run lint`, and `npm run build` on every PR and on push to `main` (`.github/workflows/ci.yml`)
 - Branch protection should require CI to pass before merging
-- **CD:** Connect the repo to Vercel for automatic deploys on push to `main` (preview deploys on PRs)
+- **CD:** Connect the repo to Netlify for automatic deploys on push to `main` (preview deploys on PRs). Build config and the `@netlify/plugin-nextjs` plugin live in `netlify.toml`.
 
 ---
 
