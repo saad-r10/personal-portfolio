@@ -1,3 +1,4 @@
-Reviewed CLAUDE.md for issue #7 (About/story section). The Project Structure
-section already documents src/sections/ generically ("Hero, Manifesto,
-Projects, ..."), so no documentation updates are required for this change.
+Reviewed CLAUDE.md for issue #8 (Contact/footer section). The Project Structure
+section already documents src/sections/ generically ("Hero, Manifesto, Projects,
+...") and src/components/primitives reuse (StatusBadge, MagneticButton), so no
+documentation updates are required for this change.
