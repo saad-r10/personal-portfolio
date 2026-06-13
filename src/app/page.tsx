@@ -1,6 +1,7 @@
 import { Hero } from "@/sections/Hero";
 import { Manifesto } from "@/sections/Manifesto";
 import { Projects } from "@/sections/Projects";
+import { About } from "@/sections/About";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Manifesto />
       <Projects />
+      <About />
     </>
   );
 }
