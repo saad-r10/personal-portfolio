@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
 import { useCursor } from "@react-three/drei";
-import { useReducedMotion } from "framer-motion";
+import { useInView, useReducedMotion } from "framer-motion";
 import * as THREE from "three";
 import type { Mesh } from "three";
 import { useDiscoveries } from "@/lib/discoveries";
@@ -220,6 +220,8 @@ function Scene({
 }
 
 export function SoccerBall({ className = "" }: { className?: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { margin: "200px" });
   const prefersReducedMotion = useReducedMotion();
   const { discover } = useDiscoveries();
   const [streak, setStreak] = useState(0);
@@ -239,8 +241,9 @@ export function SoccerBall({ className = "" }: { className?: string }) {
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div ref={containerRef} className={`relative ${className}`}>
       <Canvas
+        frameloop={isInView ? "always" : "never"}
         camera={{ position: [0, 0.4, 6], fov: 40 }}
         dpr={[1, 1.5]}
         gl={{ alpha: true, antialias: true }}
@@ -253,7 +256,7 @@ export function SoccerBall({ className = "" }: { className?: string }) {
       </Canvas>
 
       <div className="pointer-events-none absolute left-6 top-6 flex flex-col gap-1">
-        <span className="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-accent">
+        <span className="font-display text-[clamp(3rem,8vw,5rem)] leading-none text-accent-ink">
           {streak}
         </span>
         <span className="font-mono text-xs uppercase tracking-[0.3em] text-ink-soft">

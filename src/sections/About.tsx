@@ -49,7 +49,7 @@ export function About() {
               variants={fadeUp}
               className="font-display text-[clamp(2.75rem,8vw,5.5rem)] uppercase leading-[0.95]"
             >
-              Curious by <span className="text-accent">default</span>.
+              Curious by <span className="text-accent-ink">default</span>.
             </motion.h2>
 
             <motion.p

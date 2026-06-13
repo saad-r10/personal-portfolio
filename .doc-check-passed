@@ -1,5 +1,6 @@
-Reviewed CLAUDE.md for issue #9 (Kickabout / discoveries system). The Project
-Structure section already documents src/sections/, src/components/, and
-src/lib/ generically, so the new Playground section, SoccerBall/
-DiscoveryTracker components, and discoveries lib require no documentation
-updates. No new dependencies, env vars, or CI changes were introduced.
+Reviewed CLAUDE.md for issue #10 (performance & accessibility polish pass).
+No structural changes — added src/app/apple-icon.tsx (Next.js metadata file
+convention, auto-generates apple-touch-icon), plus styling/contrast/focus/
+reduced-motion/render-loop tweaks to existing sections and components.
+CLAUDE.md's Project Structure section already documents src/app and
+src/components generically; no updates needed.

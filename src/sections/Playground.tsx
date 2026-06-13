@@ -27,7 +27,7 @@ export function Playground() {
             variants={fadeUp}
             className="font-display uppercase leading-[0.95] text-[clamp(2.75rem,9vw,6.5rem)]"
           >
-            Keep It <span className="text-accent">Up.</span>
+            Keep It <span className="text-accent-ink">Up.</span>
           </motion.h2>
 
           <motion.p

@@ -102,7 +102,7 @@ export function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 4 }}
-                    className="mt-2 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-ink underline-offset-4 hover:underline"
+                    className="mt-2 inline-flex items-center gap-3 py-2 font-mono text-xs uppercase tracking-[0.3em] text-ink underline-offset-4 hover:underline"
                   >
                     View on GitHub
                     <span aria-hidden>→</span>

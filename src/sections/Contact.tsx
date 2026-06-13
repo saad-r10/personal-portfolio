@@ -58,7 +58,7 @@ export function Contact() {
                   href={link.href}
                   target={link.label === "Email" ? undefined : "_blank"}
                   rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-                  className="group inline-flex items-center gap-3 font-mono text-sm uppercase tracking-[0.3em] text-paper transition-colors hover:text-accent"
+                  className="group inline-flex items-center gap-3 py-2 font-mono text-sm uppercase tracking-[0.3em] text-paper transition-colors hover:text-accent"
                 >
                   {link.label}
                   <span
@@ -82,7 +82,7 @@ export function Contact() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-paper-soft transition-colors hover:text-paper"
+              className="inline-flex items-center gap-3 py-2 font-mono text-xs uppercase tracking-[0.3em] text-paper-soft transition-colors hover:text-paper"
             >
               Back to top
               <span aria-hidden>↑</span>
