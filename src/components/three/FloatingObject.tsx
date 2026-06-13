@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
 import { Float, useCursor } from "@react-three/drei";
-import { useReducedMotion } from "framer-motion";
+import { useInView, useReducedMotion } from "framer-motion";
 import type { Group, Mesh } from "three";
 import { useDiscoveries } from "@/lib/discoveries";
 
@@ -71,6 +71,8 @@ function Icosahedron({
 }
 
 export function FloatingObject({ className = "" }: { className?: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { margin: "200px" });
   const prefersReducedMotion = useReducedMotion();
   const { discover } = useDiscoveries();
 
@@ -79,8 +81,9 @@ export function FloatingObject({ className = "" }: { className?: string }) {
   }
 
   return (
-    <div className={className}>
+    <div ref={containerRef} className={className}>
       <Canvas
+        frameloop={isInView ? "always" : "never"}
         camera={{ position: [0, 0, 4], fov: 45 }}
         dpr={[1, 1.5]}
         gl={{ alpha: true, antialias: true }}
