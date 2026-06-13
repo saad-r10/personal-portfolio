@@ -27,7 +27,7 @@ export function Contact() {
   return (
     <MotionConfig reducedMotion="user">
       <section className="relative flex flex-col gap-20 bg-ink px-6 py-24 text-paper sm:px-10 sm:py-32">
-        <SectionLabel index="05" label="Contact" />
+        <SectionLabel index="06" label="Contact" />
 
         <motion.div
           initial="hidden"

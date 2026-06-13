@@ -1,4 +1,5 @@
-Reviewed CLAUDE.md for issue #8 (Contact/footer section). The Project Structure
-section already documents src/sections/ generically ("Hero, Manifesto, Projects,
-...") and src/components/primitives reuse (StatusBadge, MagneticButton), so no
-documentation updates are required for this change.
+Reviewed CLAUDE.md for issue #9 (Kickabout / discoveries system). The Project
+Structure section already documents src/sections/, src/components/, and
+src/lib/ generically, so the new Playground section, SoccerBall/
+DiscoveryTracker components, and discoveries lib require no documentation
+updates. No new dependencies, env vars, or CI changes were introduced.

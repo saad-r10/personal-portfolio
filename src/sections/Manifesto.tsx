@@ -8,7 +8,7 @@ export function Manifesto() {
   return (
     <MotionConfig reducedMotion="user">
       <section className="relative flex flex-col gap-16 bg-paper px-6 py-24 text-ink sm:px-10 sm:py-32">
-        <SectionLabel index="02" label="Manifesto" />
+        <SectionLabel index="03" label="Manifesto" />
 
         <motion.div
           initial="hidden"

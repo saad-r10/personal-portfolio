@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anton, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { DiscoveryProvider } from "@/lib/discoveries";
+import { DiscoveryTracker } from "@/components/primitives/DiscoveryTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +43,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <DiscoveryProvider>
+          {children}
+          <DiscoveryTracker />
+        </DiscoveryProvider>
+      </body>
     </html>
   );
 }

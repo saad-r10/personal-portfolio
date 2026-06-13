@@ -3,8 +3,9 @@
 import { useRef, useState } from "react";
 import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber";
 import { Float, useCursor } from "@react-three/drei";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import type { Group, Mesh } from "three";
+import { useDiscoveries } from "@/lib/discoveries";
 
 const ACCENT = "#F5FF3A";
 const PAPER = "#F6F3EC";
@@ -71,13 +72,10 @@ function Icosahedron({
 
 export function FloatingObject({ className = "" }: { className?: string }) {
   const prefersReducedMotion = useReducedMotion();
-  const [message, setMessage] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { discover } = useDiscoveries();
 
   function handleDiscover() {
-    setMessage(true);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setMessage(false), 2400);
+    discover("hero-orb");
   }
 
   return (
@@ -89,19 +87,6 @@ export function FloatingObject({ className = "" }: { className?: string }) {
       >
         <Icosahedron prefersReducedMotion={!!prefersReducedMotion} onDiscover={handleDiscover} />
       </Canvas>
-      <AnimatePresence>
-        {message && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.25 }}
-            className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink"
-          >
-            you found it.
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
