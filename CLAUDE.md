@@ -1,5 +1,3 @@
-@AGENTS.md
-
 # Personal Portfolio
 
 Personal portfolio website.
