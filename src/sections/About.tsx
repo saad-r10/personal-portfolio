@@ -35,7 +35,7 @@ export function About() {
   return (
     <MotionConfig reducedMotion="user">
       <section className="relative flex flex-col gap-16 bg-paper px-6 py-24 text-ink sm:px-10 sm:py-32">
-        <SectionLabel index="04" label="About" />
+        <SectionLabel index="05" label="About" />
 
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-x-12">
           <motion.div
